@@ -1,0 +1,13 @@
+@import '../../_css/common.scss';
+.container {
+    width: 100;
+}
+.products {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 75%;
+    @include large-break {
+        grid-template-columns: 100%;
+        gap: 48px;
+    }
+}

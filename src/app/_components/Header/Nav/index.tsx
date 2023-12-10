@@ -9,6 +9,7 @@ import { CartLink } from '../../CartLink'
 import { CMSLink } from '../../Link'
 
 import classes from './index.module.scss'
+import { Button } from '../../Button'
 
 export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
   const navItems = header?.navItems || []
@@ -31,11 +32,15 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
       <CartLink />
       {user && <Link href="/account">Account</Link>}
       {!user && (
-        <React.Fragment>
-          <Link href="/login">Login</Link>
-          <Link href="/create-account">Create Account</Link>
-        </React.Fragment>
+        <Button
+          el="link"
+          appearance="primary"
+          label="Login"
+          href="/login"
+          // onClick={() => (window.location.href = '/login')}
+        />
       )}
+      {user && <CartLink />}
     </nav>
   )
 }

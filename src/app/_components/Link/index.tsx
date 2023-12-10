@@ -17,6 +17,7 @@ type CMSLinkType = {
   children?: React.ReactNode
   className?: string
   invert?: ButtonProps['invert']
+  key?: number
 }
 
 export const CMSLink: React.FC<CMSLinkType> = ({
