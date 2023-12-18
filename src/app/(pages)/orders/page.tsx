@@ -57,7 +57,7 @@ export default async function Orders() {
         <ul className={classes.ordersList}>
           {orders?.map((order, index) => (
             <li key={order.id} className={classes.listItem}>
-              <Link className={classes.item} href={`/orders/${order.id}`}>
+              <Link className={classes.item} href={`/account/orders/${order.id}`}>
                 <div className={classes.itemContent}>
                   <h4 className={classes.itemTitle}>{`Order ${order.id}`}</h4>
                   <div className={classes.itemMeta}>
